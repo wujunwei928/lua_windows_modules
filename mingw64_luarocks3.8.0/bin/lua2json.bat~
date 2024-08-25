@@ -1,0 +1,5 @@
+@echo off
+setlocal
+set "LUAROCKS_SYSCONFDIR=C:\Program Files/luarocks"
+"D:\software\lua-5.2.4\lua52.exe" -e "package.path=\"D:/wujunwei/lua/mingw64_luarocks3.8.0/share/lua/5.2/?.lua;D:/wujunwei/lua/mingw64_luarocks3.8.0/share/lua/5.2/?/init.lua;\"..package.path;package.cpath=\"D:/wujunwei/lua/mingw64_luarocks3.8.0/lib/lua/5.2/?.dll;\"..package.cpath;local k,l,_=pcall(require,'luarocks.loader') _=k and l.add_context('lua-cjson','2.1.0.10-1')" "D:\wujunwei\lua\mingw64_luarocks3.8.0\lib\luarocks\rocks-5.2\lua-cjson\2.1.0.10-1\bin\lua2json" %*
+exit /b %ERRORLEVEL%
